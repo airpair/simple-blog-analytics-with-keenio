@@ -97,7 +97,7 @@ Using those two very useful features, let's see another possible BEACON_DATA chu
 }
 
 ```
-As in the previous example let's calculate the base64 of this chunk:
+As in the previous example let's calculate the base64 of this BEACON_DATA chunk:
 
 ```
 ewogICAgImtlZW4iIDogewogICAgICAgICJhZGRvbnMiIDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAibmFtZSIgOiAia2VlbjppcF90b19nZW8iLAogICAgICAgICAgICAgICAgImlucHV0IiA6IHsKICAgICAgICAgICAgICAgICAgICAiaXAiIDogImlwX2FkZHJlc3MiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgIm91dHB1dCIgOiAiaXBfZ2VvX2luZm8iCiAgICAgICAgICAgIH0KICAgICAgICBdCiAgICB9LAogICAgImlwX2FkZHJlc3MiIDogIiR7a2Vlbi5pcH0iLAogICAgInVzZXJfYWdlbnQiIDogIiR7a2Vlbi51c2VyX2FnZW50fSIsCiAgICAiaGl0IjogMSwKICAgICJwb3N0X2lkIjogMTIzNCwKICAgICJwb3N0IjogInlvdXIgcG9zdCB0aXRsZSIKfQo=
@@ -108,6 +108,10 @@ and again this is the final image tag to add to yours HTML content
 ```
 <img src="https://api.keen.io/3.0/projects/PROJECT_ID/events/COLLECTION?api_key=API_KEY&data=ewogICAgImtlZW4iIDogewogICAgICAgICJhZGRvbnMiIDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAibmFtZSIgOiAia2VlbjppcF90b19nZW8iLAogICAgICAgICAgICAgICAgImlucHV0IiA6IHsKICAgICAgICAgICAgICAgICAgICAiaXAiIDogImlwX2FkZHJlc3MiCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgIm91dHB1dCIgOiAiaXBfZ2VvX2luZm8iCiAgICAgICAgICAgIH0KICAgICAgICBdCiAgICB9LAogICAgImlwX2FkZHJlc3MiIDogIiR7a2Vlbi5pcH0iLAogICAgInVzZXJfYWdlbnQiIDogIiR7a2Vlbi51c2VyX2FnZW50fSIsCiAgICAiaGl0IjogMSwKICAgICJwb3N0X2lkIjogMTIzNCwKICAgICJwb3N0IjogInlvdXIgcG9zdCB0aXRsZSIKfQo="></img >
 ```
+
+***NOTE: in real scenario you might want to minify your JSON in order to remove white spaces. The resulting base64 chunk and image beacon source URL will be shorter***
+
+
 
 This is an example of an event which is created using this URL
 
@@ -133,7 +137,8 @@ This is an example of an event which is created using this URL
 }    
 ```
 
-You can now represent those events on your preferred dashboard.
+You can now use Keen.IO's [Data visualization SDK ](https://keen.io/docs/data-visualization/ "Data Visualization")
+to represent those events on a dashboard.
 
 ![](http://i.imgur.com/FGfg7sg.png)
 
